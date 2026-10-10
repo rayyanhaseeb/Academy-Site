@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  /* Olive accent ramp (base = #98BF64) */
+  --olive-300:  #B7D58E; /* [NEW] hover tint */
+  --olive-500:  #98BF64; /* ✓ main accent */
+  --olive-600:  #7FA350; /* [NEW] */
+  --olive-700:  #66843F; /* [NEW] */
+  --olive-800:  #4D6530; /* [NEW] */
+
+  /* Per-section accent */
+  --accent-hero:      var(--olive-500);
+  --accent-about:     var(--olive-500);
+  --accent-programs:  var(--olive-600);
+  --accent-faq:       var(--olive-500);
+  --accent-cta:       var(--olive-500);
+  --accent-footer:    var(--olive-700);
+
+  /* Buttons */
+  --btn-bg:           #354A21; /* ✓ Seaweed */
+  --btn-bg-hover:     #41592A; /* [NEW] */
+  --btn-bg-active:    #2A3B1A; /* [NEW] */
+  --btn-border:       #98BF64; /* [NEW] keeps Seaweed visible on dark bands */
+  --btn-text:         #E4F7E8; /* [NEW] pale mint, ≈9:1 on Seaweed */
+
+  /* Text */
+  --text-heading:     #FBFCF8; /* ✓ Pearl */
+  --text-body:        rgba(251,252,248,.82);
+  --text-muted:       rgba(251,252,248,.62);
+  --text-dim:         rgba(251,252,248,.42);
+
+  /* Links */
+  --link:             #AEF359; /* ✓ Lime */
+  --link-hover:       #C6FA82; /* [NEW] */
+
+  /* Section backgrounds (lightest → darkest) */
+  --bg-hero-overlay:  linear-gradient(180deg, rgba(12,16,10,.40) 0%, rgba(12,16,10,.72) 100%); /* ≈ */
+  --bg-faq:           #202B1A;
+  --bg-about:         #1B2516;
+  --bg-cta:           #151D11;
+  --bg-programs:      linear-gradient(180deg, #11170D 0%, #0C100A 100%);
+  --bg-footer:        #090C07;
+
+  /* Surfaces */
+  --surface-card:     #1C2616;
+  --surface-media:    #141414; /* ✓ image slots / placeholders */
+  --surface-faq:      #2A3822;
+  --surface-chip:     #0A0A0A;
+  --surface-ctrl:     #0B0E09;
+
+  /* Borders */
+  --border-hair:      rgba(152,191,100,.16);
+  --border-hover:     rgba(174,243,89,.45);
+
+  /* Fluid gutter */
+  --gutter:           clamp(20px, 4vw, 72px);
+}
+
+@theme {
+  --color-olive-300: var(--olive-300);
+  --color-olive-500: var(--olive-500);
+  --color-olive-600: var(--olive-600);
+  --color-olive-700: var(--olive-700);
+  --color-olive-800: var(--olive-800);
+
+  --color-accent-hero: var(--accent-hero);
+  --color-accent-about: var(--accent-about);
+  --color-accent-programs: var(--accent-programs);
+  --color-accent-faq: var(--accent-faq);
+  --color-accent-cta: var(--accent-cta);
+  --color-accent-footer: var(--accent-footer);
+
+  --color-btn-bg: var(--btn-bg);
+  --color-btn-bg-hover: var(--btn-bg-hover);
+  --color-btn-bg-active: var(--btn-bg-active);
+  --color-btn-border: var(--btn-border);
+  --color-btn-text: var(--btn-text);
+
+  --color-text-heading: var(--text-heading);
+  --color-text-body: var(--text-body);
+  --color-text-muted: var(--text-muted);
+  --color-text-dim: var(--text-dim);
+
+  --color-link: var(--link);
+  --color-link-hover: var(--link-hover);
+
+  --color-bg-faq: var(--bg-faq);
+  --color-bg-about: var(--bg-about);
+  --color-bg-cta: var(--bg-cta);
+  --color-bg-footer: var(--bg-footer);
+
+  --color-surface-card: var(--surface-card);
+  --color-surface-media: var(--surface-media);
+  --color-surface-faq: var(--surface-faq);
+  --color-surface-chip: var(--surface-chip);
+  --color-surface-ctrl: var(--surface-ctrl);
+
+  --color-border-hair: var(--border-hair);
+  --color-border-hover: var(--border-hover);
+
+  --spacing-gutter: var(--gutter);
+
+  --font-display: var(--font-oswald);
+  --font-body: var(--font-montserrat);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+:focus-visible {
+  outline: 2px solid var(--link) !important;
+  outline-offset: 3px !important;
+}
+
+section[id] {
+  scroll-margin-top: 72px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
